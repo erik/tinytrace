@@ -47,5 +47,5 @@ class Tracer(object):
         print('Elapsed time: %.4f ms' % ((end-start) * 1000))
         last = start
         for msg, ts in self.timestamps:
-            print('%-5.4f ms [of %-5.4f ms total]: %s' % (((ts-last)*1000), (ts-start)*1000, msg))
+            print('%9.4f ms [of %9.4f ms total]: %s' % (((ts-last)*1000), (ts-start)*1000, msg))
             last = ts
