@@ -2,7 +2,7 @@ from __future__ import print_function
 
 import timeit
 
-# Gives access to the highest available precision timer. 
+# Gives access to the highest available precision timer.
 TIMER = timeit.default_timer
 
 class Tracer(object):
@@ -47,5 +47,5 @@ class Tracer(object):
         print('Elapsed time: %.4f ms' % ((end-start) * 1000))
         last = start
         for msg, ts in self.timestamps:
-            print('%-5.4f ms [of %-5.4f ms total]: %s' % (((ts-last)*1000), (ts-start)*1000, msg))  
+            print('%-5.4f ms [of %-5.4f ms total]: %s' % (((ts-last)*1000), (ts-start)*1000, msg))
             last = ts
